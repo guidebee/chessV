@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB1668A1-9003-470D-8D97-2EDFF2702EB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChessV.GUI</RootNamespace>
+    <AssemblyName>ChessV</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ChessV.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ChessV.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ChessV.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ChessV.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>application_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ChessV.GUI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CapturedPiecesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CapturedPiecesControl.Designer.cs">
+      <DependentUpon>CapturedPiecesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AcknowledgementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AcknowledgementsForm.Designer.cs">
+      <DependentUpon>AcknowledgementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AppearanceSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppearanceSettingsForm.Designer.cs">
+      <DependentUpon>AppearanceSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\PresentsBoardAttribute.cs" />
+    <Compile Include="BitmapPieceSet.cs" />
+    <Compile Include="BitmapPieceSetPresentation.cs" />
+    <Compile Include="Controls\BoardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BoardControl.Designer.cs">
+      <DependentUpon>BoardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardPresentations\BoardPresentation.cs" />
+    <Compile Include="BoardPresentations\BoardWithHandsPresentation.cs" />
+    <Compile Include="BoardPresentations\BoardWithPocketsPresentation.cs" />
+    <Compile Include="ColorScheme.cs" />
+    <Compile Include="ColorSchemeLibrary.cs" />
+    <Compile Include="Forms\ConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmationForm.Designer.cs">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EngineConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EngineConfigurationForm.Designer.cs">
+      <DependentUpon>EngineConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EngineListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EngineListForm.Designer.cs">
+      <DependentUpon>EngineListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EvaluationHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EvaluationHistoryControl.Designer.cs">
+      <DependentUpon>EvaluationHistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EngineStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EngineStatisticsForm.Designer.cs">
+      <DependentUpon>EngineStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\PropertyImportException.cs" />
+    <Compile Include="Forms\GameIndexFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameIndexFilterForm.Designer.cs">
+      <DependentUpon>GameIndexFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GenerateMobilityStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GenerateMobilityStatisticsForm.Designer.cs">
+      <DependentUpon>GenerateMobilityStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoadFENForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadFENForm.Designer.cs">
+      <DependentUpon>LoadFENForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MultiPVAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MultiPVAnalysisForm.Designer.cs">
+      <DependentUpon>MultiPVAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameCatalog.cs" />
+    <Compile Include="LocationToPresentationMapping.cs" />
+    <Compile Include="BoardPresentations\TwoBoardsPresentation.cs" />
+    <Compile Include="Forms\ColorSchemeSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ColorSchemeSaveForm.Designer.cs">
+      <DependentUpon>ColorSchemeSaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameSettingsForm.Designer.cs">
+      <DependentUpon>GameSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnassignedGameVariablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnassignedGameVariablesForm.Designer.cs">
+      <DependentUpon>UnassignedGameVariablesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialBalanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialBalanceControl.Designer.cs">
+      <DependentUpon>MaterialBalanceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MovementDiagramControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MovementDiagramControl.Designer.cs">
+      <DependentUpon>MovementDiagramControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MoveSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MoveSelectForm.Designer.cs">
+      <DependentUpon>MoveSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewEngineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewEngineForm.Designer.cs">
+      <DependentUpon>NewEngineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PerftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PerftForm.Designer.cs">
+      <DependentUpon>PerftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PieceInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PieceInfoControl.Designer.cs">
+      <DependentUpon>PieceInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PiecePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PiecePropertiesForm.Designer.cs">
+      <DependentUpon>PiecePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PieceSet.cs" />
+    <Compile Include="PieceSetLibrary.cs" />
+    <Compile Include="PresentationFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyMap.cs" />
+    <Compile Include="RegistrySettings.cs" />
+    <Compile Include="Forms\StringEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StringEditForm.Designer.cs">
+      <DependentUpon>StringEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Texture.cs" />
+    <Compile Include="TextureLibrary.cs" />
+    <Compile Include="Forms\SquareColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SquareColorForm.Designer.cs">
+      <DependentUpon>SquareColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Theme.cs" />
+    <Compile Include="ThemeFactory.cs" />
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AcknowledgementsForm.resx">
+      <DependentUpon>AcknowledgementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AppearanceSettingsForm.resx">
+      <DependentUpon>AppearanceSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BoardControl.resx">
+      <DependentUpon>BoardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorSchemeSaveForm.resx">
+      <DependentUpon>ColorSchemeSaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfirmationForm.resx">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DebugForm.resx">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EngineConfigurationForm.resx">
+      <DependentUpon>EngineConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EngineListForm.resx">
+      <DependentUpon>EngineListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EvaluationHistoryControl.resx">
+      <DependentUpon>EvaluationHistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EngineStatisticsForm.resx">
+      <DependentUpon>EngineStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameIndexFilterForm.resx">
+      <DependentUpon>GameIndexFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameSettingsForm.resx">
+      <DependentUpon>GameSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GenerateMobilityStatisticsForm.resx">
+      <DependentUpon>GenerateMobilityStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadFENForm.resx">
+      <DependentUpon>LoadFENForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MultiPVAnalysisForm.resx">
+      <DependentUpon>MultiPVAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnassignedGameVariablesForm.resx">
+      <DependentUpon>UnassignedGameVariablesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialBalanceControl.resx">
+      <DependentUpon>MaterialBalanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MovementDiagramControl.resx">
+      <DependentUpon>MovementDiagramControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveSelectForm.resx">
+      <DependentUpon>MoveSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewEngineForm.resx">
+      <DependentUpon>NewEngineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PerftForm.resx">
+      <DependentUpon>PerftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PieceInfoControl.resx">
+      <DependentUpon>PieceInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PiecePropertiesForm.resx">
+      <DependentUpon>PiecePropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\SquareColorForm.resx">
+      <DependentUpon>SquareColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StringEditForm.resx">
+      <DependentUpon>StringEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Chessv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chessv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessV.Base\ChessV.Base.csproj">
+      <Project>{41D4C8DC-6052-4D5E-BEA8-F8565BD49575}</Project>
+      <Name>ChessV.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessV.Compiler\ChessV.Compiler.csproj">
+      <Project>{65F1F23C-B75F-4CC8-8F6E-34E3B1485203}</Project>
+      <Name>ChessV.Compiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessV.Games\ChessV.Games.csproj">
+      <Project>{24E2D77A-3F2C-4DBA-8A89-82EAC43C5211}</Project>
+      <Name>ChessV.Games</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessV.Manager\ChessV.Manager.csproj">
+      <Project>{2138BBF5-286A-470D-AEBD-42ADDB527ED1}</Project>
+      <Name>ChessV.Manager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EngineIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_configure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_random.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_games.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_filter_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_color_schemes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_piece_sets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_open_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_game_parameters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_less.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_engines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\target.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="application_icon.ico" />
+    <None Include="Resources\icon_gray_stop.png" />
+    <None Include="Resources\icon_gray_previous.png" />
+    <None Include="Resources\icon_gray_next.png" />
+    <None Include="Resources\icon_gray_last.png" />
+    <None Include="Resources\icon_gray_first.png" />
+    <None Include="Resources\icon_black_previous.png" />
+    <None Include="Resources\icon_black_next.png" />
+    <None Include="Resources\icon_black_stop.png" />
+    <None Include="Resources\icon_black_last.png" />
+    <None Include="Resources\icon_black_first.png" />
+    <None Include="Resources\icon_media_play.png" />
+    <None Include="Resources\icon_media_stop.png" />
+    <None Include="Resources\Stop.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\Eurasian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

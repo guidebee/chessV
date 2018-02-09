@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24E2D77A-3F2C-4DBA-8A89-82EAC43C5211}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChessV.Games</RootNamespace>
+    <AssemblyName>ChessV.Games</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ChessV.Games.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ChessV.Games.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="10x10\Colossus.cs" />
+    <Compile Include="10x10\GrandShatranj.cs" />
+    <Compile Include="10x10\OdinsRuneChess.cs" />
+    <Compile Include="10x10\RomanChess.cs" />
+    <Compile Include="10x10\ShatranjKamilX.cs" />
+    <Compile Include="10x10\TenCubedChess.cs" />
+    <Compile Include="10x8\CapablancaShatranj.cs" />
+    <Compile Include="10x8\FalconChess.cs" />
+    <Compile Include="10x8\GreatShatranj.cs" />
+    <Compile Include="11x8\MainzerSchach.cs" />
+    <Compile Include="12x12\ChessAndAHalf.cs" />
+    <Compile Include="12x12\Odyssey.cs" />
+    <Compile Include="12x12\ChessOnA12x12Board.cs" />
+    <Compile Include="12x12\GrossChess.cs" />
+    <Compile Include="10x10\OmegaChess.cs" />
+    <Compile Include="12x8\CourierChessModerno.cs" />
+    <Compile Include="8x8\DoublemoveChess.cs" />
+    <Compile Include="8x8\FileSharingChess.cs" />
+    <Compile Include="8x8\LemurianShatranj.cs" />
+    <Compile Include="8x8\Makruk.cs" />
+    <Compile Include="8x8\MarseillaisChess.cs" />
+    <Compile Include="8x8\MecklenbeckChess.cs" />
+    <Compile Include="8x8\ModernShatranj.cs" />
+    <Compile Include="8x8\MarylandChess.cs" />
+    <Compile Include="8x8\RelativeRoyaltyChess.cs" />
+    <Compile Include="8x8\RevisedChess.cs" />
+    <Compile Include="8x8\ShatranjKamil64.cs" />
+    <Compile Include="Abstract\Generic10x10.cs" />
+    <Compile Include="Abstract\Generic10x8.cs" />
+    <Compile Include="Abstract\Generic11x10.cs" />
+    <Compile Include="Abstract\Generic11x8.cs" />
+    <Compile Include="Abstract\Generic12x12.cs" />
+    <Compile Include="Abstract\Generic12x8.cs" />
+    <Compile Include="Abstract\Generic8x8.cs" />
+    <Compile Include="Abstract\GenericChess.cs" />
+    <Compile Include="Abstract\Generic__x10.cs" />
+    <Compile Include="Abstract\Generic__x12.cs" />
+    <Compile Include="Abstract\Generic__x8.cs" />
+    <Compile Include="Evaluations\ColorbindingEvaluation.cs" />
+    <Compile Include="Evaluations\Grand\GrandChessDevelopmentEvaluation.cs" />
+    <Compile Include="Evaluations\PawnStructureAdjustments.cs" />
+    <Compile Include="Evaluations\PawnStructureEvaluation.cs" />
+    <Compile Include="MiscellaneousGames\AliceChess.cs" />
+    <Compile Include="10x10\Archchess.cs" />
+    <Compile Include="12x8\ArchCourierChess.cs" />
+    <Compile Include="Abstract\UndefinedGame.cs" />
+    <Compile Include="Boards\BoardWithPockets.cs" />
+    <Compile Include="Boards\TwoBoards.cs" />
+    <Compile Include="8x8\Brouhaha.cs" />
+    <Compile Include="12x8\CagliostrosChess.cs" />
+    <Compile Include="10x8\CapablancaChess.cs" />
+    <Compile Include="8x8\Chess.cs" />
+    <Compile Include="8x8\Chess256.cs" />
+    <Compile Include="8x8\ChessWithDifferentArmies.cs" />
+    <Compile Include="8x8\ChessWithPockets.cs" />
+    <Compile Include="8x8\CorridorChess.cs" />
+    <Compile Include="12x8\CourierChess.cs" />
+    <Compile Include="8x8\DiamondChess.cs" />
+    <Compile Include="16x8\DoubleChess16x8.cs" />
+    <Compile Include="10x10\EmperorsGame.cs" />
+    <Compile Include="10x10\EurasianChess.cs" />
+    <Compile Include="8x8\ExtinctionChess.cs" />
+    <Compile Include="8x8\FischerRandomChess.cs" />
+    <Compile Include="10x10\GrandChess.cs" />
+    <Compile Include="10x8\JanusChess.cs" />
+    <Compile Include="8x8\Knightmate.cs" />
+    <Compile Include="10x8\LionsAndUnicornsChess.cs" />
+    <Compile Include="10x8\NewChancellorChess.cs" />
+    <Compile Include="10x10\OpulentChess.cs" />
+    <Compile Include="Evaluations\DevelopmentEvaluation.cs" />
+    <Compile Include="MiscellaneousGames\VikingChess.cs" />
+    <Compile Include="Pieces\Diamond\DiamondPawn.cs" />
+    <Compile Include="Pieces\OdinsRune\ForestOx.cs" />
+    <Compile Include="Pieces\OdinsRune\OdinKing.cs" />
+    <Compile Include="Pieces\OdinsRune\OdinPawn.cs" />
+    <Compile Include="Pieces\OdinsRune\Valkyrie.cs" />
+    <Compile Include="PieceTypePropertyAttributes\CaptureByAdvanceAttribute.cs" />
+    <Compile Include="PieceTypePropertyAttributes\ImpotentAttribute.cs" />
+    <Compile Include="PieceTypePropertyAttributes\RoyalAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\Alice\AliceCastlingRule.cs" />
+    <Compile Include="Rules\Alice\AliceEnPassantRule.cs" />
+    <Compile Include="Rules\Alice\AliceFlexibleCastlingRule.cs" />
+    <Compile Include="Rules\Alice\AliceRule.cs" />
+    <Compile Include="Rules\BareKingRule.cs" />
+    <Compile Include="Rules\BasicPromotionRule.cs" />
+    <Compile Include="Rules\Brouhaha\BrouhahaBorderRule.cs" />
+    <Compile Include="Rules\CaptureByAdvanceRule.cs" />
+    <Compile Include="Rules\CastlingRule.cs" />
+    <Compile Include="Rules\CheckmateRule.cs" />
+    <Compile Include="Rules\OptionalCaptureByOvertakeRule.cs" />
+    <Compile Include="Rules\ColorboundPromotionRestrictionRule.cs" />
+    <Compile Include="Rules\ComplexPromotionRule.cs" />
+    <Compile Include="Rules\EnPassantRule.cs" />
+    <Compile Include="Rules\ExtraMovesForUnmovedPieceRule.cs" />
+    <Compile Include="Rules\FileSharing\PawnSwapRule.cs" />
+    <Compile Include="Rules\FlexibleCastlingRule.cs" />
+    <Compile Include="Rules\Gross\GrossChessPromotionRule.cs" />
+    <Compile Include="Rules\KingsLeapRule.cs" />
+    <Compile Include="Rules\LocationVictoryConditionRule.cs" />
+    <Compile Include="Rules\Makruk\CountingRule.cs" />
+    <Compile Include="Rules\Move50Rule.cs" />
+    <Compile Include="Rules\MultiKing\RelativeRoyaltyCheckmateRule.cs" />
+    <Compile Include="Rules\MultiMove\DoubleMoveCompletionRule.cs" />
+    <Compile Include="Rules\MultiMove\MarseillaisMoveCompletionRule.cs" />
+    <Compile Include="Rules\MultiMove\MarylandChessMoveCompletionRule.cs" />
+    <Compile Include="Rules\NoMoveResultRule.cs" />
+    <Compile Include="Rules\Odyssey\AssassinTradeRestrictionRule.cs" />
+    <Compile Include="Rules\Omega\OmegaChessBorderRule.cs" />
+    <Compile Include="Rules\OptionalPromotion.cs" />
+    <Compile Include="Rules\PieceLocationRestrictionRule.cs" />
+    <Compile Include="Rules\PromoteByReplacementRule.cs" />
+    <Compile Include="Rules\RepetitionDrawRule.cs" />
+    <Compile Include="Rules\Xiangqi\KingFacingRule.cs" />
+    <Compile Include="Rules\Extinction\ExtinctionRule.cs" />
+    <Compile Include="Rules\Pocket\PocketDropRule.cs" />
+    <Compile Include="10x10\Shako.cs" />
+    <Compile Include="8x8\Shatranj.cs" />
+    <Compile Include="10x10\UnicornGreatChess.cs" />
+    <Compile Include="8x8\WildCastle.cs" />
+    <Compile Include="11x10\WildebeestChess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessV.Base\ChessV.Base.csproj">
+      <Project>{41D4C8DC-6052-4D5E-BEA8-F8565BD49575}</Project>
+      <Name>ChessV.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
