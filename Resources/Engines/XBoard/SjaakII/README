@@ -1,0 +1,86 @@
+Sjaak II - the next-generation general chess-like game playing program
+Copyright (C) 2011, 2014 Evert Glebbeek (eglebbk@dds.nl)
+
+Getting started
+---------------
+To compile Sjaak, you will need:
+ * A C++ compiler that understands some C99 constructs, for instance gcc
+   (standard on Linux and Mac OS X, available for Windows in the form of MinGW)
+ * CMake, a cross-platform setup and configuration system. Version 2.4 or better.
+ * GNU Make. Technically this is optional and you could pick another back-end in CMake.
+For optimal performance, you will also need
+ * A 64 bit operating system and compiler
+
+Configure Sjaak using CMake, either using cmake-gui, or from the command line. From the top-level Sjaak/
+directory, run
+
+ $ mkdir Build
+ $ cd Build
+ $ cmake ..
+
+Then run
+
+ $ make
+
+This will place all generated files in the Build/ subdirectory, leaving the source tree clean. On Windows,
+substitute mingw32-make for "make".
+The program is called "sjaakii". You can load this as an engine in
+XBoard/Winboard, or use it directly as a terminal program.
+
+License
+-------
+With a few exceptions (listed below), the source-code of SjaakII is
+released under the terms of the GNU General Public License (GPL) v3.0. A
+copy of the licence text is included in the file COPYING, or available from
+the Free Software Foundation at http://www.gnu.org/licenses/gpl.html
+
+The source-file src/misc/genrand.c is based on the 1997 implementation
+of the Mersenne Twister by Makoto Matsumoto and Takuji Nishimura and is
+released under GPL v2.0.
+
+The source files src/misc/cfgpath.c and include/cfgpath.h are based on
+public domain code by Adam Nielsen and are free for use without
+restriction.
+
+Castling, en-passant captures and repetitions
+---------------------------------------------
+In chess, a position is not repeated if the en-passant capture rights are different between the two positions,
+even if all places are otherwise in the same position. The same goes for castling rights.
+To take this into account, it is necessary to fold the rights into the position signature. Sjaak currently
+does not do this, possibly leading to incorrect draw claims.
+This will not generally be a problem and it's a lot of hassle to code these things in for the general case. So
+it's omitted. For the en-passant square, we'd have to know the type of enemy piece that could capture
+en-passant, which in general we don't.
+
+
+Q&A
+---
+Q: What is Sjaak?
+A: Sjaak is a general framework for playing chess-like games. It is
+basically a chess program that can play chess as well as a number of chess
+variants.
+
+Q: How do you pronounce that?
+A: Similar to French "Jacques". I chose the name because it sounds somewhat
+similar to what the common root of chess ("schaak" in Dutch), Chaturanga,
+Shatranj or Xiang-qi might sounds like. Appropriate for a program that
+plays general chess-like games.
+
+Q: Is Sjaak based on other programs?
+A: The move generator, evaluation function and search function were written from scratch, but the overall
+structure of the program and the data structures it uses are very heavily based on those I use in my normal
+chess program, Jazz. In fact, the code is so similar that I later copied parts of the code from Jazz to Sjaak
+with little or no modification, and so the programs are very similar in many ways. I would say they are
+siblings.
+The move structure in Sjaak is inspired by a description of the move structure of ChessV on TalkChess. Smooth
+scaling of the evaluation when approaching a 50-move draw as well as not using the score from the
+transposition table in that case is an idea picked up from Crafty.
+
+Q: Why doesn't Sjaak play atomic/losers/giveaway chess?
+A: A number of reasons. First of all there's another unrelated program by the same name that plays thsoe
+variants (and I even looked to see whether the name was used before I chose it). Having two programs with the
+same name playing the same game would be a bit confusing.
+Second of all, I'm really not that interested in these variants.
+Third, I'd need to make some modifications to the move generator and the way moves are stored, which I'm not
+inclined to do in light of the second point above.
+

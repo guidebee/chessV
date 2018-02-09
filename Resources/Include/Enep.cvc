@@ -1,0 +1,88 @@
+
+//  Enep by Aurelian Florea - in this game, one side has an extra pawn, 
+//  and the other side has augmented knights.  The augmented knight,
+//  which we will call 'Enep Knight' can also move one square horizontally 
+//  or vertically without capturing.  This file defines Enep and allows the 
+//  player to decide which side has the augmented knights (the "augmented
+//  side") and which has the extra pawn.
+
+
+//  Declare new piece type Enep Knight
+
+PieceType 'Enep Knight'
+{
+	//  Set fallback image (used if there is no 'Enep Knight' image)
+	FallbackImage = "Knight Wazir";
+
+	AddMoves
+	{
+		//  First, add the moves of the knight
+		Knight.AddMoves();
+
+		//  Now add the extra moves
+		StepMoveOnly( <1, 0> );
+		StepMoveOnly( <-1, 0> );
+		StepMoveOnly( <0, 1> );
+		StepMoveOnly( <0, -1> );
+	}
+}
+
+
+//  Declare the new game, derived from 'Chess'
+
+Game Enep : Chess
+{
+	Invented = "2016";
+	InventedBy = "Aurelian Florea";
+
+	//  New Choice AugmentedSide sets which side has the augmented 
+	//  knights.  The other side will have the extra pawn.  Here we 
+	//  are just declaring the game variable.
+	Choice AugmentedSide;
+
+	SetGameVariables
+	{
+		//  Set the options for AugmentedSide.  Note that here we are 
+		//  only setting the options, we are not picking a value.  
+		//  Since the value (AugmentedSide.Value) is not set, ChessV 
+		//  will automatically prompt the user to pick.
+		AugmentedSide = { "White", "Black" };
+
+		//  Set the opening array.  We can't fill it all in here since 
+		//  we do not yet know which side is augmented.  So we cheat and 
+		//  specify #{BlackArray} and #{WhiteArray} for now.  Later, when 
+		//  it is time to set up the pieces, the #{variable} will be 
+		//  detected and replaced with the actual value of the variable, 
+		//  which we will set in the next override, SetOtherVariables, 
+		//  which is called after the user is presented with the dialog 
+		//  box to select the AugmentedSide.
+		Array = "#{BlackArray}/8/8/#{WhiteArray}";
+	}
+
+	SetOtherVariables
+	{
+		//  Here we fill in the BlackArray and WhiteArray based on the 
+		//  selected value of AugmentedSide.  The @-sign before the names 
+		//  of the variables means that they are dynamic variables not 
+		//  declared in the definition of the game class.  We can define 
+		//  additional dynamic variables whenever we want by prefixing 
+		//  with the @-sign.
+		if( AugmentedSide.Value == "White" )
+		{
+			@BlackArray = "rnbqkbnr/pppppppp/3p4";
+			@WhiteArray = "8/PPPPPPPP/REBQKBER";
+		}
+		else
+		{
+			@BlackArray = "rebqkber/pppppppp/8";
+			@WhiteArray = "3P4/PPPPPPPP/RNBQKBNR";
+		}
+	}
+
+	AddPieceTypes
+	{
+		//  The base Game class, Chess, has already added everything else, 
+		//  all that is left to add is the Enep Knight.
+		AddPieceType( 'Enep Knight', "Enep Knight", "E", 375, 375 );
+	}
+}

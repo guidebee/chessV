@@ -1,0 +1,18 @@
+
+Game 'Almost Chess' : Chess
+{
+	Invented = "1977";
+	InventedBy = "Ralph Betza";
+	
+	AddPieceTypes
+	{
+		Queen.Enabled = false;
+		AddPieceType( Chancellor, "Chancellor", "C", 900, 925 );
+	}
+
+	SetGameVariables
+	{
+		Array = "rnbckbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBCKBNR";
+		PromotionTypes = "CRNB";
+	}
+}

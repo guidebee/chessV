@@ -1,0 +1,25 @@
+
+Game 'Hannibal Chess' : 'Generic 10x8'
+{
+	Invented = "2017";
+	InventedBy = "Kevin Pacey";
+	Symmetry = MirrorSymmetry;
+
+	SetGameVariables
+	{
+		Array = "rnebqkbenr/pppppppppp/10/10/10/10/PPPPPPPPPP/RNEBQKBENR";
+		Castling.Value = "Standard";
+		PawnDoubleMove = true;
+		EnPassant = true;
+		PromotionTypes = "QRBNE";
+	}
+
+	AddPieceTypes
+	{
+		AddPieceType( Queen, "Queen", "Q", 1100, 1150 );
+		AddPieceType( Rook, "Rook", "R", 550, 600 );
+		AddPieceType( Bishop, "Bishop", "B", 350, 350 );
+		AddPieceType( Knight, "Knight", "N", 300, 300 );
+		AddPieceType( 'Elephant Ferz', "Elephant", "E", 285, 285 );
+	}
+}

@@ -1,0 +1,26 @@
+
+Game 'Janus Kamil Chess' : 'Generic 12x8'
+{
+	Invented = "2004";
+	InventedBy = "Jörg Knappen";
+	Symmetry = MirrorSymmetry;
+
+	SetGameVariables
+	{
+		Array = "crjnbqkbnjrc/pppppppppppp/12/12/12/12/PPPPPPPPPPPP/CRJNBQKBNJRC";
+		Castling.Value = "Close Rook 3-4";
+		PawnDoubleMove = true;
+		EnPassant = true;
+		PromotionTypes = "CRJNBQ";
+	}
+
+	AddPieceTypes
+	{
+		AddPieceType( Rook, "Rook", "R", 550, 650 );
+		AddPieceType( Bishop, "Bishop", "B", 350, 400 );
+		AddPieceType( Knight, "Knight", "N", 300, 300 );
+		AddPieceType( Camel, "Camel", "C", 300, 300 );
+		AddPieceType( Queen, "Queen", "Q", 1000, 1150 );
+		AddPieceType( Archbishop, "Janus", "J", 900, 1000 );
+	}
+}

@@ -1,0 +1,27 @@
+Game 'Compound Courier Custom Chess' : 'Generic 12x8'
+{
+	Invented = "2017";
+	InventedBy = "Graeme C Neatham";
+	Symmetry = MirrorSymmetry;
+	
+	SetGameVariables
+	{
+		Array = "crnbgqkmbnrc/12/pppppppppppp/12/12/PPPPPPPPPPPP/12/CRNBGQKMBNRC";
+		PromotionTypes = "Q";
+		BareKing = true;
+		PawnDoubleMove = false;
+		EnPassant = false;
+		StalemateResult.Value = "Loss";
+	}
+	
+	AddPieceTypes
+	{
+		AddPieceType( General, "General", "G", 300, 300 );
+		AddPieceType( Chancellor, "Marshal", "M", 950, 1050 );
+		AddPieceType( Archbishop, "Courier", "C", 875, 1000 );
+		AddPieceType( Rook, "Rook", "R", 550, 650 );
+		AddPieceType( Bishop, "Bishop", "B", 350, 400 );
+		AddPieceType( Knight, "Knight", "N", 300, 300 );
+		AddPieceType( Queen, "Queen", "Q", 1000, 1150 );
+	}
+}

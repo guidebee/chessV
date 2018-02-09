@@ -1,0 +1,17 @@
+
+Game 'Latrunculi duo milia et septum' : Chess
+{
+	Invented = "2007";
+	InventedBy = "Gary K. Gifford";
+
+	AddPieceTypes
+	{
+		//  Disable the Rook and Bishop inherited from Chess
+		Rook.Enabled = false;
+		Bishop.Enabled = false;
+
+		//  Add new Rook and Bishop (that are actually Dragon King/Dragon Horse)
+		AddPieceType( 'Dragon King', "Rook", "R", 700, 750, "Dragon King" );
+		AddPieceType( 'Dragon Horse', "Bishop", "B", 500, 550, "Dragon Horse" );
+	}
+}
